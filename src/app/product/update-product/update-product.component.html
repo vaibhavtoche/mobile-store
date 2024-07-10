@@ -1,0 +1,78 @@
+<!-- <div class="container"*ngIf="(product$ | async) as product" (ngSubmit)="updateProduct()">
+    <form [formGroup]="updateForm" (ngSubmit)="addProduct()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" class="form-control" formControlName="name"[(ngModel)]="product.name"name="name">
+        </div>
+        <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].touched && f['name'].hasError('required')">
+            Name is not provided
+        </div>
+        <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].dirty && f['name'].hasError('minlength')">
+            Name should have atleast 5 characters
+        </div>
+        <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].dirty && f['name'].hasError('forbidden')">
+            yahoo not allowed as a name
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" id="price" class="form-control" formControlName="price" [(ngModel)]="product.price"name="price">
+        </div>
+        <div class="alert alert-danger" *ngIf="f['price'].invalid && f['price'].touched && f['price'].hasError('required')">
+            Price is not provided
+        </div>
+        <div class="alert alert-danger" *ngIf="f['price'].invalid && f['price'].touched && f['price'].hasError('min')">
+            Price should be more than 0
+        </div>
+        <div class="alert alert-danger" *ngIf="f['price'].invalid && f['price'].touched && f['price'].hasError('max')">
+            Price should be less than or equal to 10000
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description:</label>
+            <textarea id="description" class="form-control" formControlName="description"[(ngModel)]="product.description"name="description"></textarea>
+        </div>
+        <div>
+            <button class="btn btn-primary">Submit</button>
+        </div>
+        <input type="hidden" formControlName="imageUrl">
+    </form>
+</div>
+
+{{ addForm.value | json }}
+
+{{ f['name'].valid }}  --><form [formGroup]="updateForm" (ngSubmit)="updateProduct()" 
+*ngIf="products$ | async as prod">
+<div class="mb-3">
+  <label for="name" class="form-label">Name</label>
+  <input type="text" class="form-control" id="name"
+  formControlName="name" [(ngModel)]="prod.name">
+</div>
+<div class="alert alert-danger" *ngIf="f['name'].touched && f['name'].invalid">
+    NAME IS REQUIRED
+</div>    
+<div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].dirty && f['name'].hasError('minlength')">
+    Name should have atleast 5 characters
+</div>
+<div class="mb-3">
+  <label for="price" class="form-label">Price</label>
+  <input type="number" class="form-control" id="price" 
+  formControlName="price" [(ngModel)]="prod.price">
+</div>
+<div class="alert alert-danger" *ngIf="f['price'].touched && f['price'].invalid && f['price'].hasError('required')">
+    PRICE IS REQUIRED
+</div>
+<div class="alert alert-danger" *ngIf="f['price'].touched && f['price'].invalid && f['price'].hasError('max')">
+    PRICE IS ABOVE MAXIMUM RANGE
+</div>
+<div class="alert alert-danger" *ngIf="f['price'].touched && f['price'].invalid && f['price'].hasError('min')">
+    PRICE IS BELOW MINIMUM RANGE
+</div>
+<div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea id="description" rows="5" class="form-control" formControlName="description" 
+    [(ngModel)]="prod.description"></textarea>
+</div>
+<input type="hidden" formControlName="imageUrl">
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{updateForm.value | json}}

@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Samsung Galaxy S24 Ultra 5G",
+      "price": 159999,
+      "imageUrl": "/assets/img/Samsung Galaxy S24 Ultra 5G.jpg",
+      "description": "AI Smartphone (Titanium Gray, 12GB, 1TB Storage)"
+    },
+    {
+      "id": "2",
+      "name": "vivo T2 Pro 5G",
+      "price": 23999,
+      "imageUrl": "/assets/img/vivo T2 Pro 5G.jpg",
+      "description": "(New Moon Black, 256 GB)  (8 GB RAM)"
+    },
+    {
+      "id": "3",
+      "name": "OnePlus 11R 5G ",
+      "price": 27999,
+      "imageUrl": "/assets/img/OnePlus 11R 5G.jpg",
+      "description": " (Galactic Silver, 8GB RAM, 128GB Storage)"
+    },
+    {
+      "id": "4",
+      "name": "OPPO F21s Pro 128 GB",
+      "price": 22314,
+      "imageUrl": "/assets/img/OPPO F21s Pro 128 GB.jpg",
+      "description": "(Starlight Black, 8 GB RAM)"
+    },
+    {
+      "id": "5",
+      "name": "Realme 12 Pro+",
+      "price": 30789,
+      "imageUrl": "/assets/img/Realme 12 Pro+.jpg",
+      "description": "5G Submarine Blue, 12GB RAM, 256GB Storage"
+    },
+    {
+      "id": "6",
+      "name": "TECNO POVA 6 PRO 5G",
+      "price": 21999,
+      "imageUrl": "/assets/img/TECNO POVA 6 PRO 5G.jpg",
+      "description": "(24GB*+256GB) | 108MP Camera + 32MP Selfie Camera | 120Hz Dot-in AMOLED Display"
+    }
+  ]
+}
